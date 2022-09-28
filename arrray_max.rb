@@ -20,7 +20,7 @@
 
 def max_number(array)
   index = 0
-  max = 0
+  max = array[0]
   while index < array.length
     selected = array[index]
     if selected > max
