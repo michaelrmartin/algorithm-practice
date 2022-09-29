@@ -10,3 +10,20 @@
 # Input: "ABCDEFG", "ABCDEFG",
 # Output: 0
 
+def hamming(string1, string2)
+  index = 0
+  count = 0
+  while index < string1.length
+    if string1[index] == string2[index]
+      index += 1
+    else 
+      count += 1
+      index += 1
+    end
+  end
+  return count
+end
+
+p hamming("ABCDEFG", "ABCDEFG")
+
+  
