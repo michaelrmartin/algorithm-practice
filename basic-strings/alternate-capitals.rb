@@ -16,6 +16,7 @@
 # input "this is the third example"
 # output "tHiS Is tHe tHiRd eXaMpLe"
 
+# Visualize
 # 1. Using a while loop to iterate through the string one letter at a time
 # 2. starting with the second letter, i want the loop to user the .uppercase function on the letter or space at that index
 # 3. index will be 1 at the beginning rather that 0, and will increment by 2 through the loop
