@@ -22,3 +22,30 @@
 # 1
 
 # Resulting in 9 steps. So for input n = 12, the return value would be 9.
+
+# Visualize
+#  create a function named collatz that takes an integer as an argument
+#  need a variable called count to increment for each number of steps
+#  use a while loop where number is greater than 1
+#  create if conditional - if number is even (modulo function), than number = number /2, if number modulo 2 != 0, then number = 3 x number + 1
+#  in each case, increment count by one
+# when loop is over, return count
+
+
+def collatz(number)
+  count = 0
+  while number != 1
+    if number % 2 == 0
+      number = number / 2
+      count += 1
+    else
+      number = (number * 3) + 1
+      count += 1
+    end
+  end
+  
+  return count
+
+end
+
+p collatz(12)
