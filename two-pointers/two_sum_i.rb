@@ -31,3 +31,25 @@
 # if the sum is equal to 10, will push both numbers in to an array
 # if i get to the end of the outer loop
 
+def sum_ten?(array)
+  index = 0
+  index2 = 1
+  pair = []
+  
+  while index < array.length
+    while index2 < array.length
+      sum = array[index] + array[index2]
+      if sum == 10
+        pair << array[index]
+        pair << array[index2]
+        return pair
+      end
+      index2 += 1
+    end
+    index += 1
+    index2 = index + 1
+  end
+  return false
+end
+
+p sum_ten?([2, 5, 3, 1, 0, 7, 11])
