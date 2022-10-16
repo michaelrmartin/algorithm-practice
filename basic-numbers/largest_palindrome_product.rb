@@ -15,30 +15,39 @@
 # if conditional to check if palindrome, convert response to string and check if string[0] = string[-1]
 
 
-def largest_palindrome_product(number)
+def largest_palindrome_product
   max_palindrome = nil
-  index1 = (10 ** number)
-  index2 = index1 - 1 
+  base_index = 999
+  flex_index = 999
 
-  while !max_palindrome
-    index -= 1
-    while index2 > ((10 ** (number - 1)) -1)
-      product = index1 * index2
-      p product
+  while base_index >= 100
+    while flex_index >= 100
+      product = base_index * flex_index
       string = product.to_s
-      if string == string.reverse
-        max_palindrome = string.to_i
-        p max_palindrome
-        break
+      if string == string.reverse 
+        if !max_palindrome
+          max_palindrome = string.to_i
+          flex_index -= 1
+        else
+          if string.to_i > max_palindrome
+            max_palindrome = string.to_i
+            flex_index -= 1
+          else 
+            flex_index -= 1
+          end
+        end
       else
-        index2 -= 1
+        flex_index -= 1
       end
+    
     end
-    index2 = index1
+    flex_index = base_index
+    base_index -= 1
   end
+
   return max_palindrome
+
 end
 
-p largest_palindrome_product(3)
-      
+p largest_palindrome_product()      
     
