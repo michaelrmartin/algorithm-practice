@@ -14,3 +14,53 @@
 
 # [1, 2, 3, 97, 98, 99]
 # [90, 20, 70, 100, 30, 80, 10]
+
+# Clarify
+#   Input: array of numbers
+#   Output: true or false
+#   
+#   Example 1:
+#   Input: [34, 23, 77, 66]
+#   Output: true
+# 
+#   Example 2:
+#   Input: [3, 94, 97]
+#   Output: false
+# 
+#   Example 3:
+#   Input: []
+#   Output: false
+# 
+#   Edge cases?
+#   
+# 
+# Visualize
+#   create  a method named 100_coolio? which takes an array as an input
+#   check if array length is even. check if array.length % 2 == 0 if not, return false
+#   
+# 
+  # going to use a while loop to iterate over array and compare 
+# 
+#   
+
+def coolio?(array)
+
+  index = 0
+  end_index = array.length - 1
+
+  while index <= end_index
+    if index == end_index
+      return false unless array[index] == 100
+    else
+      return false unless array[index] + array[end_index] == 100
+    end
+
+    index += 1
+    end_index -= 1
+  end
+
+  return true
+  
+end
+
+p coolio?([3, 94, 97])
