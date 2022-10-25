@@ -25,8 +25,6 @@ def subset?(nums1, nums2)
     joined_array << num
   end
 
-  p joined_array
-
   joined_array.each do |num|
     if joined_hash[num]
       joined_hash[num] += 1
@@ -35,15 +33,11 @@ def subset?(nums1, nums2)
     end
   end
 
-  p joined_hash
-
   joined_hash.each do |key, value|
     if value == 2
       output_array << key
     end
   end
-
-  p output_array
   
   if nums2.sort! == output_array.sort!
     return true
