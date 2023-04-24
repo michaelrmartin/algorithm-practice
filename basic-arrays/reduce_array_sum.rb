@@ -13,7 +13,7 @@
 #   Input: [3, 6, 7, 4, 2]
 #   Output: 22
 
-# Visulaize
+# Visualize
 #  v 
 # [3, 6, 7, 4, 2]
 # need a variable to contain the sum of array integers
@@ -32,3 +32,4 @@ def reduce_sum(array)
 end
 
 p reduce_sum([34, 56, 4, 3, 78])
+
