@@ -40,3 +40,4 @@ def complete(posts)
   ]}
 
   posts.map do |post|
+    post[submitted_by] = users
